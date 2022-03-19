@@ -1,0 +1,28 @@
+tipe_dictionary = {"nama" : "sogeking",
+                  "umur" : "18",
+                  "hobi" : "belajar",
+                  "warga" : "indonesia"}
+print("item dictionary :",tipe_dictionary)
+
+# menampilkan item tertentu pada dictionary
+print("item yang di panggil :",tipe_dictionary.get("nama"))
+
+# mengganti item pada dictionary
+print("item awal :",tipe_dictionary.get("nama"))
+tipe_dictionary["nama"] = "ikbal"
+print("setelah update :",tipe_dictionary.get("nama"))
+print(tipe_dictionary)
+
+# menghapus item pada dictionary
+del tipe_dictionary["warga"]
+print("ini adalah del :",tipe_dictionary)
+
+tipe_dictionary.pop("hobi")
+print("ini adalah pop :",tipe_dictionary)
+
+# menambahkan item pada dictionary
+tipe_dictionary["hobi"] = "main gitar"
+print(tipe_dictionary)
+
+for i in tipe_dictionary:
+    print(i,"-->", tipe_dictionary[i])
