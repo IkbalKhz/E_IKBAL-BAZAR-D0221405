@@ -1,0 +1,37 @@
+print("="*10)
+print("TUPLE")
+print("="*10)
+
+tupel = ([1,2,3,4,5,6])
+print("isi awal",tupel)
+
+print("menampilkan item tertentu",tupel[3])
+
+# mengganti suatu item
+data = list(tupel)
+
+data[0] = "boy"
+
+tupel = data
+print("mengupdate isi dari tuple", tupel)
+
+# menghapus item
+data = list(tupel)
+tupel.remove(6)
+print("ini adalah remove",tupel)
+
+data = list(tupel)
+tupel.pop(2)
+print("ini adalah pop",tupel)
+
+# ini adalah menambahkan item
+data = list(tupel)
+tupel.append("saya")
+print("ini adalah append",tupel)
+
+data = list(tupel)
+tupel.insert(2,"kamu")
+print("ini adalah append",tupel)
+
+for i in tupel :
+    print(f"i adalah {i}")
