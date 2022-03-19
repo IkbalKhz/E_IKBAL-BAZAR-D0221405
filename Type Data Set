@@ -1,0 +1,25 @@
+tipe_set = {"ayam","rusa","kucing","singa","ayam"}
+print(tipe_set)
+
+print("menampilkan item tertentu",("ayam"))
+
+# menambahkan item
+tipe_set.add("burung")
+print(tipe_set)
+
+tipe_set.update(["cacing","kambing"])
+print(tipe_set)
+
+# menghapus item pada set
+tipe_set.remove("kambing")
+print(tipe_set)
+
+tipe_set.discard("kucing")
+print(tipe_set)
+
+tipe_set.pop()
+print(tipe_set)
+
+# perulangan
+for i in tipe_set:
+    print(i)
