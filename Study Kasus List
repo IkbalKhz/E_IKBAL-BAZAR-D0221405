@@ -1,0 +1,83 @@
+import sys
+# menu utama
+def mainMenu():
+    while True:
+        print()
+        print(""" DAFTAR BARANG
+pilihan menu yang ada :
+1. daftar barang
+2. tambah barang
+3. hapus barang
+4. apakah barang sudah ada dalam daftar
+5. edit barang
+6. menampilkan barang tertentu
+7. exit""")
+
+        selection = input("masukkan pilihan menu : ")
+        if selection == "1":
+            show_barang()
+        elif selection == "2":
+            tambah_barang()
+        elif selection == "3":
+            hapus_barang()
+        elif selection == "4":
+            cek_barang()
+        elif selection == "5":
+            edit_barang()
+        elif selection == "6":
+            barang_tertentu()
+        elif selection == "7":
+            sys.exit()
+        else:
+            print("masukkan pilihan yang benar!!")
+
+# ini adalah list
+barang = ["sepeda","pakaian", "kunci", "mobil"]
+
+# menampilkan daftar barang
+def show_barang():
+    print()
+    print("---- DAFTAR BARANG ----")
+    for i in barang:
+        print("*",i)
+
+
+# menambahkann barang
+def tambah_barang():
+    item = input("masukkan barang yang ingin ditambahkan : ")
+    barang.append(item)
+    print(item, "ditambahkan ke dalam daftar")
+
+# menghapus barang
+def hapus_barang():
+    show_barang()
+    item = input("masukkan nama barang yang ingin di hapus : ")
+    barang.remove(item)
+    print(item, "telah dihapus dari daftar barang")
+
+# menampilkan barang tertentu
+def cek_barang():
+    item = input("item apa yang ingin diperiksa di daftar barang : ")
+    if item in barang:
+        print("yes", item, "ada dalam daftar")
+    else :
+        print("No", item, "tidak ada dalam daftar")
+
+# mengedit barang
+def edit_barang():
+    show_barang()
+    item = int(input("masukkan index barang : "))
+    baru = barang[item]
+    item2 = input("mmasukkan barang baru : ")
+    barang[item] = item2
+    print(baru, "telah diganti menajdi", item2)
+
+# menampilkan barang tertentu
+def barang_tertentu():
+    show_barang()
+    awal = int(input("masukkan index barang :"))
+    tampil = barang[awal]
+    print("barang tertentu yang dipanggil >",tampil)
+
+
+mainMenu()
